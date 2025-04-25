@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Interactiva</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-size: 2em;
+      color: #3f3d56;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 10px;
+      gap: 10px;
+      max-width: 1000px;
+    }
+    button {
+      border: none;
+      border-radius: 15px;
+      padding: 10px;
+      width: 150px;
+      height: 90px;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+      color: white;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    #boton1 { background-color: #6c63ff; }
+    #boton2 { background-color: #00b894; }
+    #boton3 { background-color: #fdcb6e; color: black; }
+    #boton4 { background-color: #e17055; }
+    #boton5 { background-color: #0984e3; }
+    #boton6 { background-color: #00cec9; }
+    #boton7 { background-color: #fab1a0; color: black; }
+    #boton8 { background-color: #ff6b6b; }
+
+    .content {
+      max-width: 600px;
+      margin: 20px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Construye tu Superproyecto Digital con el Poder de la IA!</h1>
+  <div class="button-container">
+    <button id="boton1" onclick="mostrarContenido('contenido1')">1. Imaginemos Juntos</button>
+    <button id="boton2" onclick="mostrarContenido('contenido2')">2. Investiguemos con la IA</button>
+    <button id="boton3" onclick="mostrarContenido('contenido3')">3. ¡Hora de Diseñar!</button>
+    <button id="boton4" onclick="mostrarContenido('contenido4')">4. Creamos el Circuito</button>
+    <button id="boton5" onclick="mostrarContenido('contenido5')">5. Programa con la Mente</button>
+    <button id="boton6" onclick="mostrarContenido('contenido6')">6. Prueba tu Creación</button>
+    <button id="boton7" onclick="mostrarContenido('contenido7')">7. Cuenta tu Historia</button>
+    <button id="boton8" onclick="mostrarContenido('contenido8')">8. Comparte como un Héroe</button>
+  </div>
+  <div id="contenido1" class="content">
+    <strong>¿Qué queremos construir?</strong><br>
+    Este es el momento de soñar. ¿Un robot guardián? ¿Un sistema de luces mágicas? Cuéntale tu idea a la IA y deja que te ayude a imaginar tu superproyecto.
+  </div>
+  <div id="contenido2" class="content">
+    <strong>Busquemos ideas parecidas</strong><br>
+    Le pedimos a la IA que investigue si ya existen ideas como la nuestra. Así aprendemos de otros y mejoramos nuestro plan. ¡Como verdaderos inventores!
+  </div>
+  <div id="contenido3" class="content">
+    <strong>¡Hora de dibujar!</strong><br>
+    Diseñamos una maqueta usando IA que se verá como una página web. ¡Podrás mostrar cómo funcionará tu invento antes de armarlo!
+  </div>
+  <div id="contenido4" class="content">
+    <strong>Conectamos el cerebro electrónico</strong><br>
+    La IA te ayuda a crear el circuito con luces, motores o sensores. Tú le dices qué debe hacer… ¡y ella te guía paso a paso!
+  </div>
+  <div id="contenido5" class="content">
+    <strong>Le enseñamos con palabras</strong><br>
+    Ahora le pedimos a la IA que programe el cerebro del proyecto, ¡usando nuestras ideas! Así, podemos controlar todo con nuestra mente… ¡y con nuestras palabras!
+  </div>
+  <div id="contenido6" class="content">
+    <strong>¡Probemos nuestra creación!</strong><br>
+    Activamos el sistema desde una web. ¿Funciona? ¿Hace lo que queremos? ¡La IA también nos ayuda a corregir errores como un entrenador genial!
+  </div>
+  <div id="contenido7" class="content">
+    <strong>Contemos nuestra aventura</strong><br>
+    Creamos un video o presentación con ayuda de la IA para mostrar cómo nació tu invento, qué hace y por qué es increíble.
+  </div>
+  <div id="contenido8" class="content">
+    <strong>¡Tu proyecto al mundo!</strong><br>
+    Lo compartimos con tus amigos, tu familia y toda la comunidad. ¡Ahora todos sabrán que eres un Superhéroe Digital!
+  </div>
+  <script>
+    function mostrarContenido(id) {
+      const contenidos = document.querySelectorAll('.content');
+      contenidos.forEach(contenido => {
+        contenido.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
